@@ -1,2 +1,2 @@
-const allInputFields=document.querySelectorAll("[data-limit]");allInputFields.forEach((l=>{new CharLimiter(l,l.dataset)}));
+const allInputFields=document.querySelectorAll('[data-validate*="email"]');allInputFields.forEach((a=>{new EmailValidator(a,a.dataset)}));
 //# sourceMappingURL=main.js.map

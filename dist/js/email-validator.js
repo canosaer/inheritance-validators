@@ -1,0 +1,2 @@
+class EmailValidator extends BaseValidator{super(a,i){console.log("EmailValidator")}validate(a){-1===a.indexOf("@")?(this.invalid=!1,this.errorMessage="Invalid email format"):(this.invalid=!0,this.errorMessage="")}}
+//# sourceMappingURL=email-validator.js.map

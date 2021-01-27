@@ -29,7 +29,8 @@
 		</div>
 		<div class="input-row">
 			<label class="input-row__text">Email: </label>
-			<input type="email" class="input-row__input" name="email" />
+			<input type="email" class="input-row__input" data-validate="email min-length" name="email" />
+			<p class="error"></p>
 		</div>
 		<div class="message-field">
 			<textarea name="message" class="message-field__input" data-limit="200"></textarea>
@@ -40,7 +41,8 @@
 		<button class="compose__send-button">Send Message</button>
 	</form>
 
-	<script src="dist/js/char-limiter.js"></script>
+	<script src="dist/js/base-validator.js"></script>
+	<script src="dist/js/email-validator.js"></script>
 	<script src="dist/js/main.js"></script>
 
 </body>
