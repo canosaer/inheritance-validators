@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title> Messenger </title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="dist/css/main.css">
+
+</head>
+
+<body>
+
+
+	<header class="header">
+		<h1 class="header__text">Messenger</h1>
+	</header>
+
+	<form class="compose">
+		<div class="input-row">
+			<label class="input-row__text">Name: </label>
+			<input class="input-row__input" name="name" data-limit="25" />
+			<p class="char-usage char-usage_name">
+				<span class="char-usage__count char-usage__count_name"></span> chars left
+			</p>
+		</div>
+		<div class="input-row">
+			<label class="input-row__text">Email: </label>
+			<input type="email" class="input-row__input" name="email" />
+		</div>
+		<div class="message-field">
+			<textarea name="message" class="message-field__input" data-limit="200"></textarea>
+			<p class="char-usage char-usage_message">
+				<span class="char-usage__count char-usage__count_message"></span> chars left
+			</p>
+		</div>
+		<button class="compose__send-button">Send Message</button>
+	</form>
+
+	<script src="dist/js/char-limiter.js"></script>
+	<script src="dist/js/main.js"></script>
+
+</body>
+
+</html>
