@@ -1,7 +1,13 @@
 const allInputFields = document.querySelectorAll(`[data-validate*="email"]`)
 
 allInputFields.forEach((element) => {
-    const charLimited = new EmailValidator(element, element.dataset)
+    const emailValidated = new EmailValidator(element, element.dataset)
+})
+
+const allNameFields = document.querySelectorAll(`[data-validate*="full-name"]`)
+
+allNameFields.forEach((element) => {
+    const fullNameValidated = new FullNameValidator(element, element.dataset)
 })
 
 // class AnimalClass {

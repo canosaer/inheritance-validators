@@ -22,9 +22,9 @@
 	<form class="compose">
 		<div class="input-row">
 			<label class="input-row__text">Name: </label>
-			<input class="input-row__input" name="name" data-limit="25" />
-			<p class="char-usage char-usage_name">
-				<span class="char-usage__count char-usage__count_name"></span> chars left
+			<input class="input-row__input" data-validate="full-name min-length" name="name" data-limit="25" />
+			<p class="char-usage char-usage_name error">
+				<!-- <span class="char-usage__count char-usage__count_name"></span> chars left -->
 			</p>
 		</div>
 		<div class="input-row">
@@ -43,6 +43,7 @@
 
 	<script src="dist/js/base-validator.js"></script>
 	<script src="dist/js/email-validator.js"></script>
+	<script src="dist/js/full-name-validator.js"></script>
 	<script src="dist/js/main.js"></script>
 
 </body>

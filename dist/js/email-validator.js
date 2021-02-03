@@ -1,2 +1,2 @@
-class EmailValidator extends BaseValidator{super(a,i){console.log("EmailValidator")}validate(a){-1===a.indexOf("@")?(this.invalid=!1,this.errorMessage="Invalid email format"):(this.invalid=!0,this.errorMessage="")}}
+class EmailValidator extends BaseValidator{super(a,s){console.log("EmailValidator")}validate(a){/^\w+@\w+\.\w{2,3}$/.test(a)?(this.isValid=!0,this.errorMessage=""):(this.isValid=!1,this.errorMessage="Invalid email format")}}
 //# sourceMappingURL=email-validator.js.map

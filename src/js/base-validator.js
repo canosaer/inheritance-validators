@@ -1,6 +1,5 @@
 class BaseValidator{
     constructor(element, options){
-        console.log(`EmailValidator`)
         this.element = element
         this.options = options
         this.errorMessageEl = element.parentElement.querySelector(`.error`)

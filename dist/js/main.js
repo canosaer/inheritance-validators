@@ -1,2 +1,2 @@
-const allInputFields=document.querySelectorAll('[data-validate*="email"]');allInputFields.forEach((a=>{new EmailValidator(a,a.dataset)}));
+const allInputFields=document.querySelectorAll('[data-validate*="email"]');allInputFields.forEach((a=>{new EmailValidator(a,a.dataset)}));const allNameFields=document.querySelectorAll('[data-validate*="full-name"]');allNameFields.forEach((a=>{new FullNameValidator(a,a.dataset)}));
 //# sourceMappingURL=main.js.map
