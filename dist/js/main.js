@@ -1,2 +1,2 @@
-const allInputFields=document.querySelectorAll('[data-validate*="email"]');allInputFields.forEach((a=>{new EmailValidator(a,a.dataset)}));const allNameFields=document.querySelectorAll('[data-validate*="full-name"]');allNameFields.forEach((a=>{new FullNameValidator(a,a.dataset)}));
+const allLimitedFields=document.querySelectorAll("[data-limit]");allLimitedFields.forEach((l=>{new CharLimiter(l,l.dataset)}));const allEmailFields=document.querySelectorAll('[data-validate*="email"]');allEmailFields.forEach((l=>{new EmailValidator(l,l.dataset)}));const allNameFields=document.querySelectorAll('[data-validate*="full-name"]');allNameFields.forEach((l=>{new FullNameValidator(l,l.dataset)}));
 //# sourceMappingURL=main.js.map

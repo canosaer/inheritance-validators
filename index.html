@@ -22,15 +22,15 @@
 	<form class="compose">
 		<div class="input-row">
 			<label class="input-row__text">Name: </label>
-			<input class="input-row__input" data-validate="full-name min-length" name="name" data-limit="25" />
-			<p class="char-usage char-usage_name error">
+			<input class="input-row__input" data-validate="full-name min-length" name="name" />
+			<p class="error error_name">
 				<!-- <span class="char-usage__count char-usage__count_name"></span> chars left -->
 			</p>
 		</div>
 		<div class="input-row">
 			<label class="input-row__text">Email: </label>
 			<input type="email" class="input-row__input" data-validate="email min-length" name="email" />
-			<p class="error"></p>
+			<p class="error error_email"></p>
 		</div>
 		<div class="message-field">
 			<textarea name="message" class="message-field__input" data-limit="200"></textarea>
@@ -44,6 +44,7 @@
 	<script src="dist/js/base-validator.js"></script>
 	<script src="dist/js/email-validator.js"></script>
 	<script src="dist/js/full-name-validator.js"></script>
+	<script src="dist/js/char-limiter.js"></script>
 	<script src="dist/js/main.js"></script>
 
 </body>

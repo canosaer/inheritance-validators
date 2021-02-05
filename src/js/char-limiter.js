@@ -56,13 +56,13 @@ class CharLimiter{
         
 
         for(let i=0;i<allINPUTS.length;i++){
+            console.log(charUsageSpans[i])
             charUsageSpans[i].textContent = allINPUTS[i].dataset.limit
         }
 
         this.handleKeyUp = (evt) => {
             
             let defaultMessageColor = ``
-            let defaultInputColor = ``
             let j=0
             const curValue = this.element.value
             const curCount = curValue.length
@@ -78,17 +78,8 @@ class CharLimiter{
                     charUsagePs[j].style.color = this.options.messageColor
                 }
                 if(charsLeft <= 0){
-                    if (allINPUTS[j].style.backgroundColor != this.options.messageColor){
-                        defaultInputColor = allINPUTS[j].style.backgroundColor
-                        allINPUTS[j].style.backgroundColor = this.options.messageColor
-                    }
                     allINPUTS[j].value = this.element.value.substring(0,this.options.limit)
                     charUsageSpans[j].textContent = 0
-                }
-                else{
-                    if (allINPUTS[j].style.backgroundColor != defaultInputColor){
-                        allINPUTS[j].style.backgroundColor = defaultInputColor
-                    }
                 }
             }
             else{ 
