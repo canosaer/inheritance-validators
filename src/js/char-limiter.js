@@ -56,7 +56,6 @@ class CharLimiter{
         
 
         for(let i=0;i<allINPUTS.length;i++){
-            console.log(charUsageSpans[i])
             charUsageSpans[i].textContent = allINPUTS[i].dataset.limit
         }
 

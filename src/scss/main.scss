@@ -77,16 +77,16 @@ body{
 		border: none;
 		outline: none;
 		padding: 10px;
-		width: 78%;
+		width: 100%;
 	}
 }
 
 .char-usage{
 	font-size: 0.75rem;
 
-	&_name{
-		margin: 0px 15px 0px auto;
-	}
+	// &_name{
+	// 	margin: 0px 15px 0px auto;
+	// }
 
 	&_message{
 		padding: 4px;
@@ -107,4 +107,12 @@ body{
 		height: 120px;
 	}
 		
+}
+
+.error{
+	width: 45%;
+	padding-left: 1rem;
+	font-size: 0.75rem;
+	color: red;
+	text-align: right;
 }

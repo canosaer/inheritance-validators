@@ -1,1 +1,1 @@
-{"version":3,"sources":["../../src/js/full-name-validator.js"],"names":[],"mappings":"AAAC,KAAM,0BAA0B,cAC5B,MAAM,EAAS,GACX,QAAQ,IAAI,iBAGhB,SAAS,GACY,iBACF,KAAK,IAIhB,KAAK,SAAU,EACf,KAAK,aAAe,KAJpB,KAAK,SAAU,EACf,KAAK,aAAe,iC"}
+{"version":3,"sources":["../../src/js/full-name-validator.js"],"names":[],"mappings":"AAAC,KAAM,0BAA0B,cAC5B,SAAS,GACL,KAAK,MAAQ,EAAM,OACF,iBACF,KAAK,KAAK,QAIrB,KAAK,SAAU,EACf,KAAK,aAAe,KAJpB,KAAK,SAAU,EACf,KAAK,aAAe,iC"}

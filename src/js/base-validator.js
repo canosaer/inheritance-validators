@@ -14,7 +14,6 @@ class BaseValidator{
     handleChange = (evt) => {
         const el = evt.target
         const newValue = el.value
-        console.log(`handleChange`, newValue)
 
         this.validate(newValue)
         this.errorMessageEl.textContent = this.errorMessage

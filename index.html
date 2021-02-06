@@ -32,6 +32,11 @@
 			<input type="email" class="input-row__input" data-validate="email min-length" name="email" />
 			<p class="error error_email"></p>
 		</div>
+		<div class="input-row">
+			<label class="input-row__text">Phone: </label>
+			<input class="input-row__input" data-validate="us-phone min-length" name="phone" />
+			<p class="error error_phone"></p>
+		</div>
 		<div class="message-field">
 			<textarea name="message" class="message-field__input" data-limit="200"></textarea>
 			<p class="char-usage char-usage_message">
@@ -45,6 +50,7 @@
 	<script src="dist/js/email-validator.js"></script>
 	<script src="dist/js/full-name-validator.js"></script>
 	<script src="dist/js/char-limiter.js"></script>
+	<script src="dist/js/phone-validator.js"></script>
 	<script src="dist/js/main.js"></script>
 
 </body>

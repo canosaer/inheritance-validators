@@ -16,3 +16,8 @@ allNameFields.forEach((element) => {
     const fullNameValidated = new FullNameValidator(element, element.dataset)
 })
 
+const allPhoneFields = document.querySelectorAll(`[data-validate*="full-name"]`)
+
+allPhoneFields.forEach((element) => {
+    const phoneValidated = new PhoneValidator(element, element.dataset)
+})
