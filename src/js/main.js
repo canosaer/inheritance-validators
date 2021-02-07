@@ -22,11 +22,11 @@ allPhoneFields.forEach((element) => {
     const phoneValidated = new PhoneValidator(element, element.dataset)
 })
 
-// const allMinFields = document.querySelectorAll(`[data-validate*="min-length"]`)
+const allMinFields = document.querySelectorAll(`[data-validate*="min-length"]`)
 
-// allMinFields.forEach((element) => {
-//     const minValidated = new MinLengthValidator(element, element.dataset)
-// })
+allMinFields.forEach((element) => {
+    const minValidated = new MinLengthValidator(element, element.dataset)
+})
 
 // const allMaxFields = document.querySelectorAll(`[data-validate*="max-length"]`)
 

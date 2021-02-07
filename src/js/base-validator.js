@@ -3,6 +3,7 @@ class BaseValidator{
         this.element = element
         this.options = options
         this.errorMessageEl = element.parentElement.querySelector(`.error`)
+        this.isValid = false;
         
         this.setup()
     }
