@@ -1,0 +1,2 @@
+class MaxLengthValidator extends BaseValidator{validate(s){this.value=s.trim(),this.value.length>this.options.maxLength?(this.isValid=!1,this.errorMessage="Too long"):(this.isValid=!0,this.errorMessage="")}}
+//# sourceMappingURL=max-length-validator.js.map

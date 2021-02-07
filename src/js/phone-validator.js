@@ -1,9 +1,10 @@
 class PhoneValidator extends BaseValidator {
     validate(value) {
-        var fullnameRE = /^\w+\s+\w{2,}$/
-        if(!fullnameRE.test(value)){
+        this.value = value.trim()
+        var phoneRE = /^\(?\d{3}[\s.\-\)]?\s?\d{3}[\s.\-]?\d{4}$/
+        if(!phoneRE.test(this.value)){
             this.isValid = false
-            this.errorMessage = `Please enter your full name`
+            this.errorMessage = `Please enter a valid phone number`
         } else {
             this.isValid = true
             this.errorMessage = ``

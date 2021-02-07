@@ -16,8 +16,20 @@ allNameFields.forEach((element) => {
     const fullNameValidated = new FullNameValidator(element, element.dataset)
 })
 
-const allPhoneFields = document.querySelectorAll(`[data-validate*="full-name"]`)
+const allPhoneFields = document.querySelectorAll(`[data-validate*="us-phone"]`)
 
 allPhoneFields.forEach((element) => {
     const phoneValidated = new PhoneValidator(element, element.dataset)
 })
+
+// const allMinFields = document.querySelectorAll(`[data-validate*="min-length"]`)
+
+// allMinFields.forEach((element) => {
+//     const minValidated = new MinLengthValidator(element, element.dataset)
+// })
+
+// const allMaxFields = document.querySelectorAll(`[data-validate*="max-length"]`)
+
+// allMaxFields.forEach((element) => {
+//     const maxValidated = new MaxLengthValidator(element, element.dataset)
+// })

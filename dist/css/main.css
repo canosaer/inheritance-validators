@@ -153,7 +153,7 @@ TABLE OF CONTENTS:
 }
 
 body {
-  background: #ff494c;
+  background: slategray;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: column;
@@ -179,6 +179,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 25px 25px 20px;
+  max-width: 45rem;
 }
 .compose__send-button {
   border-radius: 5%;
@@ -188,8 +189,9 @@ body {
   -ms-grid-row-align: center;
       align-self: center;
   cursor: pointer;
-  background: cyan;
+  background: steelblue;
   font-weight: bold;
+  color: white;
 }
 .compose__send-button:hover {
   -webkit-filter: brightness(97%);
@@ -206,6 +208,12 @@ body {
   outline: none;
   padding: 10px;
   width: 100%;
+}
+.input-row__text {
+  font-size: 1rem;
+}
+.input-row__text_small {
+  font-size: 0.75rem;
 }
 
 .char-usage {
@@ -230,7 +238,7 @@ body {
 }
 
 .error {
-  width: 45%;
+  width: 60%;
   padding-left: 1rem;
   font-size: 0.75rem;
   color: red;

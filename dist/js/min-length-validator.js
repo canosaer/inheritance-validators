@@ -1,0 +1,2 @@
+class MinLengthValidator extends BaseValidator{validate(i){this.value=i.trim(),this.value.length<this.options.minLength?(this.isValid=!1,this.errorMessage="Not long enough"):(this.isValid=!0,this.errorMessage="")}}
+//# sourceMappingURL=min-length-validator.js.map
