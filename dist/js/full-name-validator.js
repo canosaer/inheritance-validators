@@ -1,2 +1,2 @@
-class FullNameValidator extends BaseValidator{validate(s){this.value=s.trim();/^\w+\s+(\w+\s+)*\w{2,}$/.test(this.value)?(this.isValid=!0,this.errorMessage=""):(this.isValid=!1,this.errorMessage="Please enter your full name")}}
+class FullNameValidator extends BaseValidator{validate(e){this.value=e.trim();if(/^\w+\s+(\w+\s+)*\w{2,}$/.test(this.value)){const e=this.element.dataset.validLog+"1";this.element.setAttribute("data-valid-log",e)}else{const e=this.element.dataset.validLog+"0";this.element.setAttribute("data-valid-log",e),this.errorMessage="Please enter your full name"}}}
 //# sourceMappingURL=full-name-validator.js.map

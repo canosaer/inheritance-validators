@@ -3,12 +3,28 @@ class BaseValidator{
         this.element = element
         this.options = options
         this.errorMessageEl = element.parentElement.querySelector(`.error`)
-        this.isValid = false;
+        this.validatorString = element.dataset.validate.trim()
+        this.validatorCount = 1
         
         this.setup()
     }
 
     setup() {
+        for(let i=0;i<this.validatorString.length;i++){
+            if(this.validatorString[i]===` ` && this.validatorString[i+1]!==` `){
+                this.validatorCount++
+            }
+        }
+
+        const numValidators = document.createAttribute(`data-num-validators`)
+        numValidators.value = this.validatorCount.toString()
+        this.element.setAttributeNode(numValidators)
+
+        const validLog = document.createAttribute(`data-valid-log`)
+        validLog.value = ``
+        this.element.setAttributeNode(validLog)
+
+        
         this.element.addEventListener(`change`, this.handleChange)
     }
 

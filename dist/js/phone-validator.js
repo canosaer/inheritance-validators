@@ -1,2 +1,2 @@
-class PhoneValidator extends BaseValidator{validate(s){this.value=s.trim();/^\(?\d{3}[\s.\-\)]?\s?\d{3}[\s.\-]?\d{4}$/.test(this.value)?(this.isValid=!0,this.errorMessage=""):(this.isValid=!1,this.errorMessage="Please enter a valid phone number")}}
+class PhoneValidator extends BaseValidator{validate(s){this.value=s.trim();/^1?\(?\d{3}[\s.\-\)]?\s?\d{3}[\s.\-]?\d{4}$/.test(this.value)?(this.isValid=!0,this.errorMessage=""):(this.isValid=!1,this.errorMessage="Please enter a valid phone number")}}
 //# sourceMappingURL=phone-validator.js.map

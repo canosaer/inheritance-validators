@@ -4,7 +4,7 @@ class EmailValidator extends BaseValidator{
     }
 
     validate(value) {
-        var emailRE = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+        var emailRE = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w{2,}([-.]\w{2,})*$/
         if(!emailRE.test(value)){
             this.isValid = false
             this.errorMessage = `Invalid email format`

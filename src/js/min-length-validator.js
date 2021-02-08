@@ -2,11 +2,12 @@ class MinLengthValidator extends BaseValidator {
     validate(value) {
         this.value = value.trim()
         if(this.value.length < this.options.minLength){
-            this.isValid = false
+            const logFail = this.element.dataset.validLog+`0`
+            this.element.setAttribute(`data-valid-log`, logFail)
             this.errorMessage = `Not long enough`
         } else {
-            this.isValid = true
-            this.errorMessage = ``
+            const logPass = this.element.dataset.validLog+`1`
+            this.element.setAttribute(`data-valid-log`, logPass)
         }
     }
 }

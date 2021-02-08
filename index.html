@@ -22,8 +22,8 @@
 	<form class="compose">
 		<div class="input-row">
 			<label class="input-row__text">Name: </label>
-			<input class="input-row__input" data-validate="full-name" data-min-length="2" name="name" />
-			<p class="error error_name"></p>
+			<input class="input-row__input" data-validate="full-name min-length" data-min-length="2" name="name" />
+			<p class="error error_name" data-error=""></p>
 		</div>
 		<div class="input-row">
 			<label class="input-row__text">Email: </label>
@@ -37,7 +37,7 @@
 		</div>
 		<div class="input-row">
 			<label class="input-row__text">Phone: </label>
-			<input class="input-row__input input-row__input_phone" data-validate="us-phone" data-min-length="10" data-max-length="14" name="phone" />
+			<input class="input-row__input input-row__input_phone" data-validate="us-phone" name="phone" />
 			<p class="error error_phone"></p>
 		</div>
 		<div class="message-field">

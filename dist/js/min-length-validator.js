@@ -1,2 +1,2 @@
-class MinLengthValidator extends BaseValidator{validate(i){this.value=i.trim(),this.value.length<this.options.minLength?(this.isValid=!1,this.errorMessage="Not long enough"):(this.isValid=!0,this.errorMessage="")}}
+class MinLengthValidator extends BaseValidator{validate(t){if(this.value=t.trim(),this.value.length<this.options.minLength){const t=this.element.dataset.validLog+"0";this.element.setAttribute("data-valid-log",t),this.errorMessage="Not long enough"}else{const t=this.element.dataset.validLog+"1";this.element.setAttribute("data-valid-log",t)}}}
 //# sourceMappingURL=min-length-validator.js.map
