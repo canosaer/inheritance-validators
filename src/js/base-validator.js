@@ -24,7 +24,14 @@ class BaseValidator{
         validLog.value = ``
         this.element.setAttributeNode(validLog)
 
-        
+        const validChecks = document.createAttribute(`data-valid-checks`)
+        validChecks.value = `0`
+        this.element.setAttributeNode(validChecks)
+
+        const errorMessageAttribute = document.createAttribute(`data-error-message`)
+        errorMessageAttribute.value = ``
+        this.element.setAttributeNode(errorMessageAttribute)
+
         this.element.addEventListener(`change`, this.handleChange)
     }
 
@@ -34,14 +41,18 @@ class BaseValidator{
 
         this.errorMessage = ``
         this.validate(newValue)
-        let relevantLog = this.element.dataset.validLog.substring(this.element.dataset.validLog.length-this.validatorCount, this.element.dataset.validLog.length)
-        console.log(relevantLog)
-        console.log(this.errorMessage)
-        // if (!relevantLog.includes(`0`)) this.errorMessage = ``
-        this.errorMessageEl.textContent = this.errorMessage
-
-
-
+        if(this.element.dataset.validChecks === this.element.dataset.numValidators){
+            let relevantLog = this.element.dataset.validLog.substring(this.element.dataset.validLog.length-this.validatorCount, this.element.dataset.validLog.length)
+            console.log(relevantLog)
+            if (!relevantLog.includes(`0`)){
+                this.errorMessageEl.textContent = ``
+            } 
+            else{
+                this.errorMessageEl.textContent = this.element.dataset.errorMessage
+            } 
+            this.element.dataset.validChecks = `0`
+            this.element.dataset.validLog = ``
+        }
     }
 
 }

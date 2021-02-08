@@ -6,11 +6,16 @@ class EmailValidator extends BaseValidator{
     validate(value) {
         var emailRE = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w{2,}([-.]\w{2,})*$/
         if(!emailRE.test(value)){
-            this.isValid = false
-            this.errorMessage = `Invalid email format`
+            const logFail = this.element.dataset.validLog+`0`
+            this.element.setAttribute(`data-valid-log`, logFail)
+            const checks = (parseInt(this.element.dataset.validChecks)+1)
+            this.element.setAttribute(`data-valid-checks`, checks.toString())
+            this.element.setAttribute(`data-error-message`,`Invalid email format`)
         } else {
-            this.isValid = true
-            this.errorMessage = ``
+            const logPass = this.element.dataset.validLog+`1`
+            this.element.setAttribute(`data-valid-log`, logPass)
+            const checks = (parseInt(this.element.dataset.validChecks)+1)
+            this.element.setAttribute(`data-valid-checks`, checks.toString())
         }
     }
 }
