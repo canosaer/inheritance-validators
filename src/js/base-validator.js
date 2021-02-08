@@ -43,7 +43,6 @@ class BaseValidator{
         this.validate(newValue)
         if(this.element.dataset.validChecks === this.element.dataset.numValidators){
             let relevantLog = this.element.dataset.validLog.substring(this.element.dataset.validLog.length-this.validatorCount, this.element.dataset.validLog.length)
-            console.log(relevantLog)
             if (!relevantLog.includes(`0`)){
                 this.errorMessageEl.textContent = ``
             } 

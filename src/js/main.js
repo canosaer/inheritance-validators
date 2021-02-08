@@ -28,8 +28,14 @@ allMinFields.forEach((element) => {
     const minValidated = new MinLengthValidator(element, element.dataset)
 })
 
-// const allMaxFields = document.querySelectorAll(`[data-validate*="max-length"]`)
+const allMaxFields = document.querySelectorAll(`[data-validate*="max-length"]`)
 
-// allMaxFields.forEach((element) => {
-//     const maxValidated = new MaxLengthValidator(element, element.dataset)
-// })
+allMaxFields.forEach((element) => {
+    const maxValidated = new MaxLengthValidator(element, element.dataset)
+})
+
+const allMinMaxFields = document.querySelectorAll(`[data-validate*="minmax"]`)
+
+allMinMaxFields.forEach((element) => {
+    const minmaxValidated = new MinMaxValidator(element, element.dataset)
+})

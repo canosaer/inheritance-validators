@@ -1,2 +1,2 @@
-
+class MinMaxValidator extends BaseValidator{validate(t){if(this.value=t.trim(),this.value.length>=this.options.min&&this.value.length<=this.options.max){const t=this.element.dataset.validLog+"1";this.element.setAttribute("data-valid-log",t);const e=parseInt(this.element.dataset.validChecks)+1;this.element.setAttribute("data-valid-checks",e.toString())}else{const t=this.element.dataset.validLog+"0";this.element.setAttribute("data-valid-log",t);const e=parseInt(this.element.dataset.validChecks)+1;this.element.setAttribute("data-valid-checks",e.toString()),this.element.setAttribute("data-error-message",`Must be between ${this.options.min} and ${this.options.max} characters`)}}}
 //# sourceMappingURL=min-max-validator.js.map

@@ -22,7 +22,7 @@
 	<form class="compose">
 		<div class="input-row">
 			<label class="input-row__text">Name: </label>
-			<input class="input-row__input" data-validate="full-name min-length" data-min-length="2" name="name" />
+			<input class="input-row__input" data-validate="full-name minmax" data-min="2" data-max="10" name="name" />
 			<p class="error error_name" data-error=""></p>
 		</div>
 		<div class="input-row">
@@ -51,7 +51,8 @@
 	
 	<script src="dist/js/base-validator.js"></script>
 	<script src="dist/js/min-length-validator.js"></script>
-	<!-- <script src="dist/js/max-length-validator.js"></script> -->
+	<script src="dist/js/max-length-validator.js"></script>
+	<script src="dist/js/min-max-validator.js"></script>
 	<script src="dist/js/email-validator.js"></script>
 	<script src="dist/js/full-name-validator.js"></script>
 	<script src="dist/js/char-limiter.js"></script>
