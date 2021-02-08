@@ -45,9 +45,15 @@ class BaseValidator{
             let relevantLog = this.element.dataset.validLog.substring(this.element.dataset.validLog.length-this.validatorCount, this.element.dataset.validLog.length)
             if (!relevantLog.includes(`0`)){
                 this.errorMessageEl.textContent = ``
+                if(this.element.classList.contains(`error-field`)){
+                    this.element.classList.remove(`error-field`)
+                }
             } 
             else{
                 this.errorMessageEl.textContent = this.element.dataset.errorMessage
+                if(!this.element.classList.contains(`error-field`)){
+                    this.element.classList.add(`error-field`)
+                }
             } 
             this.element.dataset.validChecks = `0`
             this.element.dataset.validLog = ``

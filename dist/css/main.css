@@ -244,4 +244,9 @@ body {
   color: red;
   text-align: right;
 }
+
+.error-field {
+  background: red;
+  border: 1px solid red;
+}
 /*# sourceMappingURL=main.css.map */

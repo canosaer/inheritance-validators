@@ -7,7 +7,6 @@ class ConfirmationValidator extends BaseValidator {
             const checks = (parseInt(this.element.dataset.validChecks)+1)
             this.element.setAttribute(`data-valid-checks`, checks.toString())
             this.element.setAttribute(`data-error-message`,`Does not match`)
-            console.log(`yo`)
         } else {
             const logPass = this.element.dataset.validLog+`1`
             this.element.setAttribute(`data-valid-log`, logPass)
