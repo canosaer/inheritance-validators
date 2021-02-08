@@ -27,17 +27,17 @@
 		</div>
 		<div class="input-row">
 			<label class="input-row__text">Email: </label>
-			<input type="email" class="input-row__input input-row__input_email" data-validate="email" name="email" />
+			<input type="email" class="input-row__input input-row__input_email" data-validate="email min-length" data-min-length="2" name="email" />
 			<p class="error error_email"></p>
 		</div>
 		<div class="input-row">
 			<label class="input-row__text">Email: <span class="input-row__text input-row__text_small">(confirm)</span> </label>
-			<input type="email" class="input-row__input input-row__input_email-confirm" data-validate="email" name="email" />
+			<input type="email" class="input-row__input input-row__input_email-confirm" data-validate="email confirmation" data-confirm-matches="input-row__input_email" name="email" />
 			<p class="error error_email"></p>
 		</div>
 		<div class="input-row">
 			<label class="input-row__text">Phone: </label>
-			<input class="input-row__input input-row__input_phone" data-validate="us-phone" name="phone" />
+			<input class="input-row__input input-row__input_phone" data-validate="us-phone max-length" data-max-length="10" name="phone" />
 			<p class="error error_phone"></p>
 		</div>
 		<div class="message-field">
@@ -54,6 +54,7 @@
 	<script src="dist/js/max-length-validator.js"></script>
 	<script src="dist/js/min-max-validator.js"></script>
 	<script src="dist/js/email-validator.js"></script>
+	<script src="dist/js/confirmation-validator.js"></script>
 	<script src="dist/js/full-name-validator.js"></script>
 	<script src="dist/js/char-limiter.js"></script>
 	<script src="dist/js/phone-validator.js"></script>

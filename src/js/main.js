@@ -39,3 +39,9 @@ const allMinMaxFields = document.querySelectorAll(`[data-validate*="minmax"]`)
 allMinMaxFields.forEach((element) => {
     const minmaxValidated = new MinMaxValidator(element, element.dataset)
 })
+
+const allConfirmationFields = document.querySelectorAll(`[data-validate*="confirmation"]`)
+
+allConfirmationFields.forEach((element) => {
+    const confirmationValidated = new ConfirmationValidator(element, element.dataset)
+})
