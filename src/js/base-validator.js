@@ -32,8 +32,16 @@ class BaseValidator{
         const el = evt.target
         const newValue = el.value
 
+        this.errorMessage = ``
         this.validate(newValue)
+        let relevantLog = this.element.dataset.validLog.substring(this.element.dataset.validLog.length-this.validatorCount, this.element.dataset.validLog.length)
+        console.log(relevantLog)
+        console.log(this.errorMessage)
+        // if (!relevantLog.includes(`0`)) this.errorMessage = ``
         this.errorMessageEl.textContent = this.errorMessage
+
+
+
     }
 
 }
