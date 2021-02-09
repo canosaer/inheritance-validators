@@ -31,8 +31,15 @@ class BaseValidator{
         const errorMessageAttribute = document.createAttribute(`data-error-message`)
         errorMessageAttribute.value = ``
         this.element.setAttributeNode(errorMessageAttribute)
-
+        
         this.element.addEventListener(`change`, this.handleChange)
+        this.element.addEventListener(`keyup`, this.handleInvalid)
+    }
+
+    handleInvalid = (evt) => {
+        if(this.element.classList.contains(`error-field`)){
+            this.handleChange(evt)
+        }
     }
 
     handleChange = (evt) => {
